@@ -1,0 +1,132 @@
+{
+    "ab": {
+        "start": "2008-01-01 00:00:00",
+        "type": "gst",
+        "pst": 0,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.05,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:56:53.000000Z"
+    },
+    "bc": {
+        "start": "2012-04-01 00:00:00",
+        "type": "gst,pst",
+        "pst": 0.07,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.12,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:43.000000Z"
+    },
+    "mb": {
+        "start": "2019-07-01 00:00:00",
+        "type": "gst,pst",
+        "pst": 0.07,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.12,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:58:06.000000Z"
+    },
+    "nb": {
+        "start": "2016-07-01 00:00:00",
+        "type": "hst",
+        "pst": 0.1,
+        "hst": 0.15,
+        "gst": 0.05,
+        "applicable": 0.15,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:48.000000Z"
+    },
+    "nl": {
+        "start": "2016-07-01 00:00:00",
+        "type": "hst",
+        "pst": 0.1,
+        "hst": 0.15,
+        "gst": 0.05,
+        "applicable": 0.15,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:52.000000Z"
+    },
+    "ns": {
+        "start": "2008-01-01 00:00:00",
+        "type": "hst",
+        "pst": 0.1,
+        "hst": 0.15,
+        "gst": 0.05,
+        "applicable": 0.15,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:51:09.000000Z"
+    },
+    "nt": {
+        "start": "2008-01-01 00:00:00",
+        "type": "gst",
+        "pst": 0,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.05,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:56.000000Z"
+    },
+    "nu": {
+        "start": "2008-01-01 00:00:00",
+        "type": "gst",
+        "pst": 0,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.05,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:58:00.000000Z"
+    },
+    "on": {
+        "start": "2008-01-01 00:00:00",
+        "type": "hst",
+        "pst": 0.08,
+        "hst": 0.13,
+        "gst": 0.05,
+        "applicable": 0.13,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:21.000000Z"
+    },
+    "pe": {
+        "start": "2016-10-01 00:00:00",
+        "type": "hst",
+        "pst": 0.1,
+        "hst": 0.15,
+        "gst": 0.05,
+        "applicable": 0.15,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:26.000000Z"
+    },
+    "qc": {
+        "start": "2013-01-01 00:00:00",
+        "type": "gst,pst",
+        "pst": 0.09975,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.14975,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-06-01T14:39:07.000000Z"
+    },
+    "sk": {
+        "start": "2017-03-23 00:00:00",
+        "type": "gst,pst",
+        "pst": 0.06,
+        "hst": 0.11,
+        "gst": 0.05,
+        "applicable": 0.11,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:34.000000Z"
+    },
+    "yt": {
+        "start": "2008-01-01 00:00:00",
+        "type": "gst",
+        "pst": 0,
+        "hst": 0,
+        "gst": 0.05,
+        "applicable": 0.05,
+        "source": "Wikipedia (https:\/\/en.wikipedia.org\/wiki\/Sales_taxes_in_Canada), accessed May 31 2019.",
+        "updated_at": "2019-05-31T14:57:38.000000Z"
+    }
+}
