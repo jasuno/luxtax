@@ -16,11 +16,9 @@ const Example = () => {
             <div className="relative flex justify-between h-16">
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="lg:block  w-80 py-2"
-                    src="/images/logo.png"
-                    alt="Logo"
-                  />
+                  <p className=" font-bold border-2 border-black p-1">
+                    LUX TAX CALCULATOR
+                  </p>
                 </div>
               </div>
             </div>

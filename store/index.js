@@ -16,7 +16,7 @@ class SignUp {
 
   province = "";
   vehicle = "";
-  price = "";
+  price = 0;
 
   updateProvince = (province) => {
     this.province = province;
@@ -38,8 +38,6 @@ class SignUp {
     const vehicleTaxLimit =
       this.vehicle.toLocaleLowerCase() === "boat" ? 250000 : 100000;
     let vehicleLuxTax = 0;
-
-    console.log("vehicle", this.vehicle.toLocaleLowerCase());
 
     if (vehiclePrice < vehicleTaxLimit) {
       vehicleLuxTax = 0;

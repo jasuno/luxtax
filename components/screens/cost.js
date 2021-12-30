@@ -15,7 +15,7 @@ const Cost = () => {
       exit={{ opacity: 0 }}
       className="bg-gray-50 h-screen flex flex-col items-center justify-center"
     >
-      <div className="absolute top-5 w-screen">
+      <div className="absolute top-0 w-screen">
         <Nav />
       </div>
       <div className="flex items-center justify-center absolute w-screen top-36">

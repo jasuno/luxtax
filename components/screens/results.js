@@ -16,10 +16,10 @@ const Results = () => {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <div className="bg-gray-50">
-        <div className="absolute top-5 w-screen">
+        <div className=" absolute top-0 w-screen">
           <Nav />
         </div>
-        <div className="flex items-center justify-center absolute w-screen top-36">
+        <div className="flex items-center justify-center w-screen relative top-36">
           <BreadCrumbs active={3} />
         </div>
         <div className="max-w-7xl h-screen mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 flex flex-col lg:flex-row items-center justify-center lg:justify-between">
