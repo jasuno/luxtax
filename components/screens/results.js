@@ -13,7 +13,7 @@ const converterToCurrency = (value) => {
 
 const content = () => {
   return (
-    <div className="flex w-full lg:mt-0 lg:flex-shrink-0">
+    <div className="flex w-full mx-4 lg:w-full lg:mt-0 lg:flex-shrink-0">
       <motion.div
         variants={stagger}
         className=" w-full bg-red-50 py-4 px-6 rounded-md"
@@ -44,7 +44,7 @@ const content = () => {
           variants={fadeInUp}
           className="flex flex-row items-center justify-between"
         >
-          <p>Tax | HST / GST</p>
+          <p>HST / GST</p>
           <p>{converterToCurrency(Store.result.tax)}</p>
         </motion.div>
         <motion.div
@@ -67,7 +67,7 @@ const content = () => {
 
 const explanation = () => {
   return (
-    <div className="mx-4  md:w-1/2 text-center font-medium mb-24 md:mb-0">
+    <div className="mx-4 md:w-1/2 text-center font-medium mb-24 md:mb-0">
       <p>{`Since you are buying a ${converterToCurrency(
         Store.result.subtotal
       )} ${

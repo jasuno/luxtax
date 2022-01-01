@@ -33,7 +33,7 @@ const Layout = ({
             <span className="block">{title}</span>
             <span className="block text-canadaRed">{subtitle}</span>
           </h2>
-          <div className="flex lg:w-1/2 md:ml-8 lg:mt-0 lg:flex-shrink-0">
+          <div className="flex w-screen lg:w-1/2 md:ml-8 lg:mt-0 lg:flex-shrink-0">
             {content}
           </div>
         </div>
