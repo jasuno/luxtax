@@ -5,7 +5,9 @@ class SignUp {
   constructor() {
     makeObservable(this, {
       province: observable,
+      provinceName: observable,
       updateProvince: action,
+      updateProvinceName: action,
       vehicle: observable,
       updateVehicle: action,
       price: observable,
@@ -17,9 +19,14 @@ class SignUp {
   province = "";
   vehicle = "";
   price = "";
+  provinceName = "";
 
   updateProvince = (province) => {
     this.province = province;
+  };
+
+  updateProvinceName = (provinceName) => {
+    this.provinceName = provinceName;
   };
 
   updateVehicle = (vehicle) => {

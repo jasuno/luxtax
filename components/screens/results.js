@@ -82,7 +82,11 @@ const explanation = () => {
         Store.result.highLux < Store.result.lowLux
           ? Store.result.highLux
           : Store.result.lowLux
-      )} in luxury tax, which is the lesser of the two.`}</p>
+      )} in luxury tax${
+        Store.result.lowLux !== Store.result.highLux
+          ? ", which is the lesser of the two."
+          : ""
+      } `}</p>
 
       <p className="mt-6">
         For more information visit the{" "}
