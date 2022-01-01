@@ -16,7 +16,7 @@ const Layout = ({
       initial="initial"
       animate="animate"
       exit={{ opacity: 0 }}
-      className="bg-gray-50 min-h-screen flex flex-col md:items-center md:justify-center"
+      className="bg-gray-50 h-full flex flex-col md:items-center md:justify-center"
     >
       <div className="absolute top-0 w-screen">
         <Nav />
