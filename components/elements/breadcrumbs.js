@@ -13,7 +13,12 @@ const BreadCrumbs = ({ active }) => {
   const isResultsAccessible = Store.province && Store.vehicle && Store.price;
 
   const pages = [
-    { name: "Province", href: "/", current: false, finished: Store.province },
+    {
+      name: Store.province ? Store.province : "Province",
+      href: "/",
+      current: false,
+      finished: Store.province,
+    },
     {
       name: "Vehicle",
       href: isVehicleAccessible ? "/vehicle" : "#",
