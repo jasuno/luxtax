@@ -54,7 +54,7 @@ const BreadCrumbs = ({ active }) => {
                 <a
                   className={`text-sm font-medium text-gray-500 hover:text-gray-700 ${
                     index !== 0 && "ml-4 "
-                  } ${index === active && "text-canadaRed font-bold"} ${
+                  } ${index === active && "text-canadaRed font-extrabold"} ${
                     page.finished && "text-canadaRed "
                   }`}
                   aria-current={index === active ? "page" : undefined}
