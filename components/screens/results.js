@@ -2,8 +2,7 @@ import React from "react";
 import Store from "../../store";
 import { motion } from "framer-motion";
 import { stagger, fadeInUp } from "../../animations";
-import BreadCrumbs from "../elements/breadcrumbs";
-import Nav from "../elements/nav";
+import Layout from "../elements/layout";
 
 const converterToCurrency = (value) => {
   return new Intl.NumberFormat("en-CA", {
@@ -12,75 +11,101 @@ const converterToCurrency = (value) => {
   }).format(value || 0);
 };
 
+const content = () => {
+  return (
+    <div className="flex w-full lg:mt-0 lg:flex-shrink-0">
+      <motion.div
+        variants={stagger}
+        className=" w-full bg-red-50 py-4 px-6 rounded-md"
+      >
+        <motion.div
+          variants={fadeInUp}
+          className="flex flex-row items-center justify-between"
+        >
+          <p>Subtotal</p>
+          <p>{converterToCurrency(Store.result.subtotal)}</p>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="w-full border-t my-4 border-red-200"
+        />
+        <motion.div
+          variants={fadeInUp}
+          className="flex flex-row items-center justify-between"
+        >
+          <p>Luxury Tax</p>
+          <p>{converterToCurrency(Store.result.luxtax)}</p>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="w-full border-t my-4 border-red-200"
+        />
+        <motion.div
+          variants={fadeInUp}
+          className="flex flex-row items-center justify-between"
+        >
+          <p>Tax | HST / GST</p>
+          <p>{converterToCurrency(Store.result.tax)}</p>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="w-full border-t my-4 border-red-200"
+        />
+        <motion.div
+          variants={fadeInUp}
+          className="flex flex-row items-center justify-between"
+        >
+          <p className=" font-bold">Total</p>
+          <p className=" font-bold">
+            {converterToCurrency(Store.result.total)}
+          </p>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+};
+
+const explanation = () => {
+  return (
+    <div className="w-1/2 text-center font-medium">
+      <p>{`Since you are buying a ${converterToCurrency(
+        Store.result.subtotal
+      )} ${
+        Store.vehicle
+      }, 10 per cent of the total value would be ${converterToCurrency(
+        Store.result.lowLux
+      )}, and 20 per cent of the value above ${
+        Store.vehicle.toLocaleLowerCase() === "boat" ? "$250,000" : "$100,000"
+      } would be ${converterToCurrency(
+        Store.result.highLux
+      )}, so you’d be required to pay ${converterToCurrency(
+        Store.result.highLux < Store.result.lowLux
+          ? Store.result.highLux
+          : Store.result.lowLux
+      )} in luxury tax, which is the lesser of the two.`}</p>
+
+      <p className="mt-6">
+        For more information visit the{" "}
+        <a
+          className="text-canadaRed font-bold"
+          href="https://www.canada.ca/en/department-finance/programs/consultations/2021/consultation-proposed-luxury-tax.html"
+        >
+          official government website
+        </a>
+      </p>
+    </div>
+  );
+};
+
 const Results = () => {
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-      <div className="bg-gray-50">
-        <div className=" absolute top-0 w-screen">
-          <Nav />
-        </div>
-        <div className="flex items-center justify-center w-screen relative top-36">
-          <BreadCrumbs active={3} />
-        </div>
-        <div className="max-w-7xl h-screen mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 flex flex-col lg:flex-row items-center justify-center lg:justify-between">
-          <h2 className="lg:w-1/2 lg:mb-0 mb-10 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            <span className="block">Results</span>
-            <span className="block text-canadaRed">
-              Here is the breakdown of your purchase.
-            </span>
-          </h2>
-          <div className="flex w-full lg:w-1/2 lg:mt-0 lg:flex-shrink-0">
-            <motion.div
-              variants={stagger}
-              className=" w-full bg-red-50 py-4 px-6 rounded-md"
-            >
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-row items-center justify-between"
-              >
-                <p>Subtotal</p>
-                <p>{converterToCurrency(Store.result.subtotal)}</p>
-              </motion.div>
-              <motion.div
-                variants={fadeInUp}
-                className="w-full border-t my-4 border-red-200"
-              />
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-row items-center justify-between"
-              >
-                <p>Lux Tax</p>
-                <p>{converterToCurrency(Store.result.luxtax)}</p>
-              </motion.div>
-              <motion.div
-                variants={fadeInUp}
-                className="w-full border-t my-4 border-red-200"
-              />
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-row items-center justify-between"
-              >
-                <p>Tax</p>
-                <p>{converterToCurrency(Store.result.tax)}</p>
-              </motion.div>
-              <motion.div
-                variants={fadeInUp}
-                className="w-full border-t my-4 border-red-200"
-              />
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-row items-center justify-between"
-              >
-                <p className=" font-bold">Total</p>
-                <p className=" font-bold">
-                  {converterToCurrency(Store.result.total)}
-                </p>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
+    <Layout
+      title="Results."
+      subtitle="Here is the breakdown of your purchase."
+      content={content()}
+      activePage={3}
+      actionButton={explanation()}
+    />
   );
 };
 

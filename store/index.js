@@ -33,10 +33,11 @@ class SignUp {
   get result() {
     const provinceTax = taxes[this.province.toLocaleLowerCase()]?.applicable;
     const vehiclePrice = Number(this.price);
-    const highLux = (vehiclePrice - 100000) * 0.2;
-    const lowLux = vehiclePrice * 0.1;
     const vehicleTaxLimit =
       this.vehicle.toLocaleLowerCase() === "boat" ? 250000 : 100000;
+    const highLux = (vehiclePrice - vehicleTaxLimit) * 0.2;
+    const lowLux = vehiclePrice * 0.1;
+
     let vehicleLuxTax = 0;
 
     if (vehiclePrice < vehicleTaxLimit) {
@@ -57,6 +58,8 @@ class SignUp {
       luxtax: vehicleLuxTax,
       tax: vehicleTax,
       total: totalPrice,
+      highLux,
+      lowLux,
     };
   }
 }
