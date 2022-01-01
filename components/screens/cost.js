@@ -23,7 +23,7 @@ const Cost = () => {
 
   const content = () => {
     return (
-      <div className="w-full relative rounded-md">
+      <div className="w-full mx-4 relative rounded-md">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <span className="text-gray-500 md:text-2xl">$</span>
         </div>
