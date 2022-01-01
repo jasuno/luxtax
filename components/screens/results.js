@@ -67,7 +67,7 @@ const content = () => {
 
 const explanation = () => {
   return (
-    <div className="w-1/2 text-center font-medium">
+    <div className="mx-4  md:w-1/2 text-center font-medium mb-24 md:mb-0">
       <p>{`Since you are buying a ${converterToCurrency(
         Store.result.subtotal
       )} ${
