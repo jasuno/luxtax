@@ -66,7 +66,7 @@ const content = () => {
 };
 
 const explanation = () => {
-  return (
+  return Store.result.luxtax ? (
     <div className="mx-4 md:w-1/2 text-center font-medium mb-24 md:mb-0">
       <p>{`Since you are buying a ${converterToCurrency(
         Store.result.subtotal
@@ -94,6 +94,10 @@ const explanation = () => {
         </a>
       </p>
     </div>
+  ) : (
+    <p className="mx-4 md:w-1/2 text-center font-medium mb-24 md:mb-0">
+      No luxury tax applicable
+    </p>
   );
 };
 
