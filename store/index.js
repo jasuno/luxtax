@@ -19,7 +19,7 @@ class SignUp {
   province = "";
   vehicle = "";
   price = "";
-  provinceName = "";
+  provinceName = "Select a province";
 
   updateProvince = (province) => {
     this.province = province;
